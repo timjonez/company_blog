@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+
+{% block content%}
+
+  <h1>{{announcement.title}}</h1>
+  <p>{{announcement.content}}</p>
+
+{% if user.is_superuser %}
+  <a class="btn btn-primary" href="{% url 'announcements:announcement_edit' pk=announcement.pk%}"><span class="fa fa-pencil"></span></a>
+  <a class="btn btn-primary" href="{% url 'announcements:announcement_remove' pk=announcement.pk%}"><span class="fa fa-remove"></span></a>
+{% endif %}
+
+{% endblock%}

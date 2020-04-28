@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+  {% for announcement in announcement_list %}
+
+    <div class="prayer">
+       <a href="{% url 'announcements:announcement_detail' pk=announcement.pk%}"><h3>{{announcement.title|safe}}</h3></a>
+      <p>{{announcement.date|date:'m-d-y'}}</p>
+      <p>{{announcement.content|truncatewords:30}}</p>
+    </div>
+
+
+  {% endfor%}
+
+    {% if user.is_superuser %}
+      <a class="btn btn-primary" href="{% url 'announcement:create_announcement'%}">Add</a>
+    {% endif%}
+
+{% endblock %}
