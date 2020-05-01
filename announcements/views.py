@@ -16,7 +16,7 @@ class AnnouncementListView(LoginRequiredMixin, ListView):
     model = Announcement
 
     def get_queryset(self):
-        return Prayer.objects.filter(date__lte=timezone.now()).order_by('-date')
+        return Announcement.objects.filter(date__lte=timezone.now()).order_by('-date')
 
 class AnnouncementDetailView(LoginRequiredMixin, DetailView):
     model = Announcement

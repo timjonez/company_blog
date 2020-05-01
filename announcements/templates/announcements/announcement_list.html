@@ -14,7 +14,7 @@
   {% endfor%}
 
     {% if user.is_superuser %}
-      <a class="btn btn-primary" href="{% url 'announcement:create_announcement'%}">Add</a>
+      <a class="btn btn-success" href="{% url 'announcements:create_announcement'%}">Add Announcement</a>
     {% endif%}
 
 {% endblock %}

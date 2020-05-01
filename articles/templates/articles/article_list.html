@@ -2,16 +2,15 @@
 
 {% block content %}
 
-<div class="container postlist">
-
+<div class="col-lg-10 post-contain">
     {% for article in article_list %}
-        <div class="post">
-          <h1><a href="{% url 'articles:article_detail' pk=article.pk%}">{{ article.title }}</a></h1>
-          <div class="date">
-              <p>Published on: {{ article.published_date|date:'m/d/yy'}}</p>
-              <p>{{article.text|safe|truncatewords:30}}</p>
-          </div>
-        </div>
+          <a id='post-link' href="{% url 'articles:article_detail' pk=article.pk%}">
+            <div class="post">
+                <h1>{{ article.title }}</h1>
+                <p>Published on: {{ article.published_date|date:'m/d/yy'}}</p>
+                <p>{{article.text|safe|truncatewords:30}}</p>
+            </div>
+          </a>
     {% endfor %}
 </div>
 
