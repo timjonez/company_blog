@@ -2,19 +2,23 @@
 
 {% block content %}
 
+  <div class="col-lg-8 announcement-container">
   {% for announcement in announcement_list %}
 
-    <div class="prayer">
-       <a href="{% url 'announcements:announcement_detail' pk=announcement.pk%}"><h3>{{announcement.title|safe}}</h3></a>
-      <p>{{announcement.date|date:'m-d-y'}}</p>
-      <p>{{announcement.content|truncatewords:30}}</p>
-    </div>
 
+       <a class="announcement-link" href="{% url 'announcements:announcement_detail' pk=announcement.pk%}">
+         <div class="announcement">
+            <h3>{{announcement.title|safe}}</h3>
+            <p>{{announcement.date|date:'m-d-y'}}</p>
+            <p>{{announcement.content|truncatewords:30}}</p>
+         </div>
+      </a>
 
   {% endfor%}
 
     {% if user.is_superuser %}
       <a class="btn btn-success" href="{% url 'announcements:create_announcement'%}">Add Announcement</a>
     {% endif%}
+  </div>
 
 {% endblock %}

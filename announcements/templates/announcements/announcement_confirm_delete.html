@@ -1,9 +1,14 @@
 {% extends 'base.html'%}
 
 {% block content%}
- <h2>Are you sure?</h2>
- <form method="post">
-   {% csrf_token %}
-   <input type="submit" class='btn btn-danger' value="Delete">
- </form>
+  <div class="col-md-4 announcement-delete">
+
+   <h2>Are you sure?</h2>
+   <form method="post">
+     {% csrf_token %}
+     <input type="submit" class='btn btn-danger' value="Delete">
+   </form>
+
+ </div>
+
 {% endblock%}

@@ -1,14 +1,18 @@
 {% extends 'base.html'%}
 
+{% load bootstrap4 %}
 {% block content %}
 
-  {% if user.is_superuser%}
-    <h1>Add New Prayer Request</h1>
-    <form method="post">
-      {% csrf_token %}
-      {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Add</button>
+  <div class="col-md-8 announcement-form">
+      {% if user.is_superuser%}
+        <h1>Add/Edit Announcement</h1>
+        <form method="post">
+          {% csrf_token %}
+          {% bootstrap_form form %}
+            <button type="submit" class="btn btn-primary">Add</button>
 
-    </form>
-  {% endif%}
+        </form>
+      {% endif%}
+  </div>
+
 {% endblock %}

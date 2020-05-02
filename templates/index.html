@@ -18,10 +18,12 @@
           </div>
 
     {% else %}
-      <div class="jumbotron">
-              <style>
-                .imagebackground{background-image:none;}
-              </style>
+
+
+      <div class="col-md-8 welcome-wall">
+        <div class='logo-index'>
+            <img src= "media/logo.png" alt="" style="width:250px;height:auto;">
+        </div>
           <div class="loginsignup">
             <h2>Please Log In or Sign Up</h2>
             <a class="btn btn-primary btn-lg" href="{% url 'users:login'%}" role='button'>Log In</a>
