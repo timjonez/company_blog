@@ -27,7 +27,7 @@
         {% if user.is_authenticated %}
         <div class="navbar-nav align-items-center">
           <a class="navbar-brand" href="{% url 'home'%}">
-            <img src="{% static 'company_blog/logo-only.png'%}" alt="Express Inc" height="35px">
+            <img src="media/logo-only.png" alt="Express Inc" height="35px">
           </a>
           <a class="nav-item nav-link" href="{% url 'articles:article_list'%}" class="btn btn-simple">Articles</a>
           <a class="nav-item nav-link" href="{% url 'announcements:announcement_list'%}" class="btn btn-simple">Announcements</a>
