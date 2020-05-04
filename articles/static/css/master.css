@@ -118,6 +118,15 @@ body{
 
 }
 
+.comment-form{
+  margin: auto;
+  margin-top: 5%;
+  padding: 40px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 12px 10px;
+}
+
 
 .element{
   background-color: lighten(#0074d9, 20);
