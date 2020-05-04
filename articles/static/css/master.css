@@ -24,6 +24,7 @@ body{
 }
 
 .welcome-wall{
+  text-align: center;
   margin: auto;
   padding-bottom: 50px;
   background-color: white;
@@ -36,7 +37,6 @@ body{
   margin: auto;
   margin-top: 50px;
   margin-bottom: 10px;
-  margin-left: 29.5%;
   padding: 20px;
 }
 
@@ -94,18 +94,6 @@ body{
   box-shadow: 0px 0px 12px 2px;
 }
 
-.indexfooter{
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: white;
-  opacity: .90;
-  text-align: center;
-  padding: 10px;
-  font-size: .90em;
-}
-
 #article-form{
   margin: auto;
   margin-top: 3%;
@@ -127,19 +115,6 @@ body{
   right: 0;
 }
 
-.loginsignup{
-  text-align: center;
-}
-
-/*Contact us styling */
-.contactpage{
-  text-align: center;
-}
-
-.aboutpicture{
-  border-radius: 20px;
-  margin-right: 10px;
-}
 
 .announcement{
   background-color: white;
@@ -190,6 +165,25 @@ body{
   margin: auto;
   margin-top: 10%;
   padding: 30px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 12px 5px;
+}
+
+.sign-up{
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  padding: 40px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 12px 5px;
+}
+
+.login{
+  margin: auto;
+  margin-top: 14%;
+  padding: 40px;
   background-color: white;
   border-radius: 5px;
   box-shadow: 0px 0px 12px 5px;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load static %}
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -27,7 +28,7 @@
         {% if user.is_authenticated %}
         <div class="navbar-nav align-items-center">
           <a class="navbar-brand" href="{% url 'home'%}">
-            <img src="media/logo-only.png" alt="Express Inc" height="35px">
+            <img src="{% static 'media/logo-only.png' %}" alt="Express Inc" height="35px">
           </a>
           <a class="nav-item nav-link" href="{% url 'articles:article_list'%}" class="btn btn-simple">Articles</a>
           <a class="nav-item nav-link" href="{% url 'announcements:announcement_list'%}" class="btn btn-simple">Announcements</a>
