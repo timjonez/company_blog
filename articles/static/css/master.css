@@ -13,6 +13,10 @@ body{
   background-color: white;
 }
 
+#custom-nav{color: grey;}
+#custom-nav:hover{color: black;}
+
+
 .centerstage{
   background-color: white;
   margin: auto;
@@ -40,6 +44,17 @@ body{
   padding: 20px;
 }
 
+.indexfooter{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(255, 255, 255);
+  opacity: .90;
+  text-align: center;
+  padding: 5px;
+  font-size: .90em;
+}
 
 #post-page{
   margin: auto;
