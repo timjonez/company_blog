@@ -127,6 +127,15 @@ body{
   box-shadow: 0px 0px 12px 10px;
 }
 
+.confirm-delete{
+  text-align: center;
+  margin: auto;
+  margin-top: 15%;
+  padding: 40px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 5px;
+}
 
 .element{
   background-color: lighten(#0074d9, 20);

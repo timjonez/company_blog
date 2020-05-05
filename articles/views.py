@@ -66,12 +66,12 @@ def article_publish(request, pk):
 
 @login_required
 def add_comment_to_article(request, pk):
-    post = get_object_or_404(Article, pk=pk)
+    article = get_object_or_404(Article, pk=pk)
     if request.method == "POST":
         form = CommentForm(request.POST)
         if form.is_valid():
             comment = form.save(commit=False)
-            comment.post = post
+            comment.article = article
             comment.save()
             return redirect('articles:article_detail', pk=article.pk)
     else:
@@ -83,12 +83,12 @@ def add_comment_to_article(request, pk):
 def comment_approve(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     comment.approve()
-    return redirect('articles:article_detail', pk=comment.post.pk)
+    return redirect('articles:article_detail', pk=comment.article.pk)
 
 
 @user_passes_test(lambda u: u.is_superuser)
 def comment_remove(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
-    post_pk = comment.post.pk
+    post_pk = comment.article.pk
     comment.delete()
     return redirect('articles:article_detail', pk=post_pk)
